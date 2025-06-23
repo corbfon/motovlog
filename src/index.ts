@@ -8,7 +8,7 @@ import { ProjectFile } from './pipeline/types'
 /** @TODO make this configurable in the CLI */
 const projectName = '2018-12-31_23-18-32_CAM_SES1'
 
-const run = async () => {
+export const run = async () => {
   const sources: ProjectFile[] = (await readdir(join(INPUT_DIR, projectName)))
     .map((filename) => join(INPUT_DIR, projectName, filename))
     .map((path) => {
@@ -36,4 +36,6 @@ const run = async () => {
   console.log(results)
 }
 
-run().catch((err) => console.error('Error in main process:', err))
+if (require.main === module) {
+  run().catch((err) => console.error('Error in main process:', err))
+}
