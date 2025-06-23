@@ -9,20 +9,13 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^5.1.0",
     "ffmpeg-static": "^5.2.0",
-    "fluent-ffmpeg": "^2.1.2",
-    "serverless": "^4.14.2",
-    "serverless-http": "^3.2.0"
+    "fluent-ffmpeg": "^2.1.2"
   },
   "devDependencies": {
-    "@serverless/typescript": "^4.14.1",
-    "@types/express": "^5.0.1",
     "@types/fluent-ffmpeg": "^2.1.24",
     "@types/node": "^22.15.3",
     "nodemon": "^3.1.10",
-    "serverless-esbuild": "^1.55.0",
-    "serverless-offline": "^14.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
