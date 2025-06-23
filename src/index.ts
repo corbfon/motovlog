@@ -32,8 +32,8 @@ const run = async () => {
       }
     })
     .filter((x) => !!x)
-  const results = pipeline(sources)
+  const results = await pipeline(sources)
   console.log(results)
 }
 
-run()
+run().catch((err) => console.error('Error in main process:', err))

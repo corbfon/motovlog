@@ -1,4 +1,4 @@
-export type PipelineStage = (stage: PipelineData) => PipelineData
+export type PipelineStage = (stage: PipelineData) => Promise<PipelineData> | PipelineData
 
 export type ProjectFile = {
   path: string

@@ -10,7 +10,8 @@ export const TEMP_DIR = join(__dirname, '..', 'tmp')
 let tempProjectFolder: string | null = null
 export const getProjectTempFolder = () => {
   if (tempProjectFolder) return tempProjectFolder
-  tempProjectFolder = join(TEMP_DIR, uuid())
+  tempProjectFolder = join(TEMP_DIR, Date.now().toString())
+  console.log('temp name', tempProjectFolder)
   mkdirSync(tempProjectFolder)
   return tempProjectFolder
 }
